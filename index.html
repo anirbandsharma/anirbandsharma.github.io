@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anirban Dev Sharma</title>
     <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
-    <style>
+    <!-- <style>
       body {
         background-image: linear-gradient(
             to top right,
@@ -20,7 +25,7 @@
         background-attachment: fixed;
         background-size: 100%;
       }
-    </style>
+    </style> -->
   </head>
   <body>
     <div class="home">
@@ -28,39 +33,85 @@
         <h3 class="slide">something</h3>
         <ul>
           <li><h3>Home</h3></li>
-          <li><h3>About</h3></li>
-          <li><h3>Contact</h3></li>
+          <li onclick="window.location='#about'"><h3>About</h3></li>
+          <li onclick="window.location='#projects'"><h3>Projects</h3></li>
+          <li onclick="window.location='#contact'"><h3>Contact</h3></li>
         </ul>
       </nav>
       <div class="logo">
         <h3 class="logo-text">Anirban Dev Sharma</h3>
       </div>
+      <div class="text">
+        <p>Something about me. Ok thank you.</p>
+        <p>SOME MORE LINES</p>
+        <button class="main-button">Maybe</button>
+      </div>
+      <div class="photo">
+        <img src="./images/avatar.png" alt="avatar" />
+      </div>
     </div>
 
-    <section class="part1">
-      <h1>Something 1</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex cupiditate
-        voluptatibus nihil quibusdam mollitia. Ullam corrupti quia officiis
-        culpa, quisquam numquam suscipit velit, vel voluptatum, quam possimus
-        similique explicabo omnis. Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Totam aperiam neque numquam quo saepe atque.
-        Laudantium ex sunt magnam aspernatur excepturi neque ipsa facilis
-        expedita mollitia pariatur. Dolore, sapiente minima.
-      </p>
+    <section class="part1" id="about">
+      <h1>About Me</h1>
+      <div class="about">
+        <div class="about-text">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste
+            tempore ea ullam obcaecati ipsa, doloribus ducimus. Officia, dolore
+            magnam deleniti saepe quasi fugit, eaque iusto consectetur itaque
+            corporis expedita ad!
+          </p>
+          <button class="main-button">Download CV</button>
+        </div>
+        <img src="./images/avatar.png" alt="" />
+      </div>
     </section>
 
-    <section class="part2">
-      <h1>Something 1</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex cupiditate
-        voluptatibus nihil quibusdam mollitia. Ullam corrupti quia officiis
-        culpa, quisquam numquam suscipit velit, vel voluptatum, quam possimus
-        similique explicabo omnis. Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Totam aperiam neque numquam quo saepe atque.
-        Laudantium ex sunt magnam aspernatur excepturi neque ipsa facilis
-        expedita mollitia pariatur. Dolore, sapiente minima.
-      </p>
+    <section class="part2" id="projects">
+      <h1>Projects</h1>
+      <div class="projects">
+        <div class="project-cell">
+          <div class="card">
+            <div class="project-text">
+              <h2>Facebook Clone</h2>
+              <br />
+              <p>
+                facebook clone with html and core css and javascript with php
+                and mysql (not fully responsive - yet)
+              </p>
+              <button
+                class="main-button"
+                onclick="location.href='http://fbclone.great-site.net/';"
+              >
+                Demo
+              </button>
+            </div>
+            <img src="./images/fakebook.png" alt="" />
+          </div>
+        </div>
+        <div class="project-cell">
+          <div class="card">
+            <div class="project-text">
+              <h2>Windows 10</h2>
+              <br />
+              <p>
+                Windows 10 interface clone with html and core css with
+                javascript
+              </p>
+              <button
+                class="main-button"
+                onclick="location.href='http://win10.great-site.net/';"
+              >
+                Demo
+              </button>
+            </div>
+            <img src="./images/win.png" alt="" />
+          </div>
+        </div>
+        <div class="project-cell">
+          <div class="card">slide 3</div>
+        </div>
+      </div>
     </section>
 
     <script
@@ -76,5 +127,16 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="./app.js"></script>
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    <script>
+      var flkty = new Flickity(".projects", {
+        // options
+        cellAlign: "center",
+        contain: true,
+        pageDots: true,
+      });
+    </script>
   </body>
 </html>
