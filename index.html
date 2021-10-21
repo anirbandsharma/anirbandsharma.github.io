@@ -10,6 +10,10 @@
       rel="stylesheet"
       href="https://unpkg.com/flickity@2/dist/flickity.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
     <!-- <style>
@@ -31,15 +35,18 @@
     <div class="home">
       <nav class="nav" id="nav">
         <h3 class="slide">something</h3>
-        <ul>
-          <li><h3>Home</h3></li>
+        <ul class="links">
+          <li onclick="window.scrollTo(0, 0);"><h3>Home</h3></li>
           <li onclick="window.location='#about'"><h3>About</h3></li>
           <li onclick="window.location='#projects'"><h3>Projects</h3></li>
           <li onclick="window.location='#contact'"><h3>Contact</h3></li>
         </ul>
+        <div class="menu" id="menu">|||</div>
       </nav>
       <div class="logo">
-        <h3 class="logo-text">Anirban Dev Sharma</h3>
+        <h3 class="logo-text" onclick="window.scrollTo(0, 0);">
+          Anirban Dev Sharma
+        </h3>
       </div>
       <div class="text">
         <p>Something about me. Ok thank you.</p>
@@ -51,9 +58,20 @@
       </div>
     </div>
 
+    <!-- mobile-menu -->
+    <div class="menu-open" id="menu-open">
+      <ul>
+        <a><h3>Home</h3></a>
+        <a href="#about" id="menu-close1"><h3>About</h3></a>
+        <a href="#projects" id="menu-close2"><h3>Projects</h3></a>
+        <a href="#contact" id="menu-close3"><h3>Contact</h3></a>
+      </ul>
+    </div>
+
     <section class="part1" id="about">
       <h1>About Me</h1>
       <div class="about">
+        <img src="./images/profile.jpg" alt="" />
         <div class="about-text">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste
@@ -61,9 +79,11 @@
             magnam deleniti saepe quasi fugit, eaque iusto consectetur itaque
             corporis expedita ad!
           </p>
-          <button class="main-button">Download CV</button>
+          <button class="main-button">
+            <span class="material-icons"> file_download </span>
+            <span>Download CV</span>
+          </button>
         </div>
-        <img src="./images/avatar.png" alt="" />
       </div>
     </section>
 
@@ -110,6 +130,27 @@
         </div>
         <div class="project-cell">
           <div class="card">slide 3</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="part3" id="contact">
+      <h1>Contact</h1>
+      <div class="contact">
+        <img src="./images/3.jpg" alt="" />
+        <div class="login">
+          <form action="login.php" method="POST">
+            <input type="text" name="name" placeholder="Name" />
+            <input type="email" name="email" placeholder="Email address" />
+            <textarea
+              name="message"
+              id=""
+              cols="25"
+              rows="10"
+              placeholder="Your message"
+            ></textarea>
+            <input type="submit" class="main-button" value="Send" />
+          </form>
         </div>
       </div>
     </section>

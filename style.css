@@ -12,16 +12,23 @@ h1 {
 p {
   font-size: 1.2rem;
 }
+span {
+  padding: 0 5px;
+  font-size: 1rem;
+}
 
 .main-button {
   margin-top: 20px;
-  padding: 15px 60px;
+  padding: 15px 50px;
   border: none;
   border-radius: 2rem;
   font-size: 1.2rem;
   background-color: rgb(70, 173, 233);
   color: white;
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.377);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .nav {
@@ -33,10 +40,16 @@ p {
   top: 0;
   padding: 0.6rem 5rem;
   color: black;
-  background-color: white;
+  background-color: rgb(114, 230, 214);
+}
+.menu,
+.menu-open {
+  display: none;
 }
 .home {
   z-index: 10;
+  pointer-events: none;
+  height: 100vh;
 }
 
 .logo {
@@ -45,6 +58,10 @@ p {
   left: 35%;
   transform: translate(-50%, -50%) scale(4);
   filter: drop-shadow(0px 0px 1px rgba(255, 255, 255, 0.534));
+}
+.logo-text {
+  pointer-events: all;
+  cursor: pointer;
 }
 
 .text {
@@ -64,17 +81,14 @@ p {
   filter: drop-shadow(0px 0px 5px rgb(48, 135, 185));
 }
 
-ul {
+.links {
   display: flex;
 }
-li {
+.links li {
+  pointer-events: all;
   list-style: none;
   margin-left: 3rem;
   cursor: pointer;
-}
-
-.home {
-  height: 100vh;
 }
 
 section {
@@ -85,31 +99,40 @@ section {
   justify-content: center;
   align-items: center;
 }
+
 section h1 {
-  margin: 40px;
+  margin: 40px 0;
 }
 
 .about {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   justify-content: space-around;
   align-items: center;
+  padding: 10px;
 }
 .about p {
-  width: 500px;
+  max-width: 500px;
 }
 .project-cell p {
-  width: 400px;
+  max-width: 400px;
 }
-.about img,
-.project-cell img {
-  width: 300px;
+.about img {
+  max-width: 300px;
+  border-radius: 1.5rem;
+  box-shadow: -20px -20px 0px 0px rgb(123, 158, 54);
+}
+
+.card img {
+  max-width: 300px;
+  border: 2px solid white;
 }
 
 .projects {
   width: 100%;
   height: 100%;
-  z-index: 20;
 }
 .project-cell {
   width: 100%;
@@ -117,37 +140,121 @@ section h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px;
 }
 .card {
   width: 80%;
-  height: 440px;
+  height: 100%;
+  padding: 10px;
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   justify-content: space-evenly;
   align-items: center;
   background-color: rgb(222, 231, 238);
-  border-radius: 2rem;
+  border-radius: 1.5rem;
   box-shadow: 0px 0px 5px 1px rgb(149, 149, 149);
 }
 
-/* .part1 {
-  background-image: linear-gradient(
-      315deg,
-      rgba(72, 84, 97, 0.5) 0%,
-      rgba(40, 49, 59, 0.8) 74%
-    ),
-    url("./images/2.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
+.contact {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-around;
+  align-items: center;
 }
-.part2 {
-  background-image: linear-gradient(
-      315deg,
-      rgba(72, 84, 97, 0.5) 0%,
-      rgba(40, 49, 59, 0.8) 74%
-    ),
-    url("./images/3.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-} */
+.contact img {
+  max-width: 400px;
+}
+
+.login {
+  width: 600px;
+  height: fit-content;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 7px rgba(182, 182, 182, 0.514);
+  padding: 10px 16px;
+}
+.login form input,
+textarea {
+  width: 100%;
+  padding: 16px;
+  margin: 6px 0;
+  border: 0.5px solid rgba(128, 128, 128, 0.253);
+  border-radius: 0.5rem;
+  font-size: 16px;
+}
+
+/* mobile */
+@media (max-width: 600px) {
+  section {
+    padding: 6rem 0.3rem;
+  }
+  .nav {
+    padding: 0.6rem 1rem;
+  }
+  .card img {
+    width: 200px;
+  }
+  .logo {
+    top: 25%;
+    left: 48%;
+    transform: translate(-50%, -50%) scale(2);
+  }
+
+  .text {
+    top: 33%;
+    left: 5%;
+  }
+
+  .photo {
+    top: 55%;
+    right: 5%;
+  }
+  .photo img {
+    width: 200px;
+  }
+
+  .links {
+    display: none;
+  }
+  .menu {
+    display: block;
+    font-weight: 900;
+    padding: 0 10px;
+    transform: rotate(90deg);
+    pointer-events: all;
+    cursor: pointer;
+  }
+  .contact img {
+    width: 300px;
+  }
+}
+
+.menu-open {
+  display: none;
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(190, 218, 138, 0.945);
+  color: rgb(0, 0, 0);
+  justify-content: center;
+  align-items: center;
+}
+.menu-open ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menu-open a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 0;
+  list-style: none;
+  cursor: pointer;
+}
