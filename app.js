@@ -84,22 +84,21 @@ else{
 // nav-mobile
 var menuBtn = document.getElementById("menu");
 var menuOpen = document.getElementById("menu-open");
-var menuC1 = document.getElementById("menu-close1");
-var menuC2 = document.getElementById("menu-close2");
-var menuC3= document.getElementById("menu-close3");
-var menuC4 = document.getElementById("menu-close4");
 
 menuBtn.onclick = function () {
     menuOpen.style.display = "flex";
     document.body.style.overflow = "hidden";
 }
-menuC1.onclick = function () {
-    menuOpen.style.display = "none";
-    document.body.style.overflow = "auto";
-}
+
 window.onclick = function (event) {
     if (event.target == menuOpen) {
         menuOpen.style.display = "none";
         document.body.style.overflow = "auto";
     }
 }
+
+/* Close */
+function closeN() {
+    menuOpen.style.display = "none";
+    document.body.style.overflow = "auto";
+  }

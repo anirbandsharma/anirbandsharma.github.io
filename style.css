@@ -255,10 +255,10 @@ textarea {
   justify-content: center;
   align-items: center;
 }
-.menu-open a {
-  text-decoration: none;
-  color: black;
+.menu-open li {
   padding: 10px 0;
+  font-size: 2rem;
+  color: black;
   list-style: none;
   cursor: pointer;
 }

@@ -34,12 +34,18 @@
   <body>
     <nav class="nav" id="nav-mobile">
       <h3 class="slide">something</h3>
-      <ul class="links">
-        <li onclick="window.scrollTo(0, 0);"><h3>Home</h3></li>
-        <li onclick="window.location='#about'"><h3>About</h3></li>
-        <li onclick="window.location='#projects'"><h3>Projects</h3></li>
-        <li onclick="window.location='#contact'"><h3>Contact</h3></li>
-      </ul>
+      <div class="menu-open" id="menu-open">
+        <ul>
+          <li onclick="closeN()"><h3>Home</h3></li>
+          <li onclick="closeN(); window.location='#about'"><h3>About</h3></li>
+          <li onclick="closeN(); window.location='#projects'">
+            <h3>Projects</h3>
+          </li>
+          <li onclick="closeN(); window.location='#contact'">
+            <h3>Contact</h3>
+          </li>
+        </ul>
+      </div>
       <div class="menu" id="menu">|||</div>
     </nav>
 
@@ -67,16 +73,6 @@
       <div class="photo">
         <img src="./images/avatar.png" alt="avatar" />
       </div>
-    </div>
-
-    <!-- mobile-menu -->
-    <div class="menu-open" id="menu-open">
-      <ul>
-        <a><h3>Home</h3></a>
-        <a href="#about" id="menu-close1"><h3>About</h3></a>
-        <a href="#projects" id="menu-close2"><h3>Projects</h3></a>
-        <a href="#contact" id="menu-close3"><h3>Contact</h3></a>
-      </ul>
     </div>
 
     <div class="home-mobile">
