@@ -43,7 +43,8 @@ span {
   background-color: rgb(255, 255, 255);
 }
 .menu,
-.menu-open {
+.menu-open,
+.home-mobile {
   display: none;
 }
 .home {
@@ -194,6 +195,10 @@ textarea {
   .nav {
     padding: 0.6rem 1rem;
     z-index: 100;
+  }
+  .home,
+  .navi {
+    display: none;
   }
   .home-mobile {
     height: 100vh;

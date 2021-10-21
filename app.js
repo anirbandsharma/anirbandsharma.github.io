@@ -1,59 +1,64 @@
-let tl = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.home',
-        start: "0%",
-        end: "80%",
-        scrub: 1,
-    },
-});
-
-let tl2 = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.home',
-        start: "0%",
-        end: "80%",
-        scrub: 1,
-    },
-});
-
-let tlN = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.home',
-        start: "0%",
-        end: "80%",
-        scrub: 1,
-    },
-});
-
-let tlText = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.home',
-        start: "0%",
-        end: "80%",
-        scrub: 1,
-    },
-});
-
-let tlPhoto = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.home',
-        start: "0%",
-        end: "80%",
-        scrub: 1,
-    },
-});
 
 
-const mediaQuery = window.matchMedia('(max-width: 600px)')
-// Check if the media query is true
-if (mediaQuery.matches) {
-    document.getElementById("home").style.display = "none";
-    tl.fromTo('.slide', {innerText:"something"}, {innerText: "Anirban Dev Sharma"});
-}
-else{
+    let tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.home',
+            start: "0%",
+            end: "80%",
+            scrub: 1,
+        },
+    });
+    
+    let tl2 = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.home',
+            start: "0%",
+            end: "80%",
+            scrub: 1,
+        },
+    });
 
-    document.getElementById("home-mobile").style.display = "none";
-    document.getElementById("nav-mobile").style.display = "none";
+
+    
+    let tlN = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.home',
+            start: "0%",
+            end: "80%",
+            scrub: 1,
+        },
+    });
+    
+    let tlText = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.home',
+            start: "0%",
+            end: "80%",
+            scrub: 1,
+        },
+    });
+    
+    let tlPhoto = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.home',
+            start: "0%",
+            end: "80%",
+            scrub: 1,
+        },
+    });
+
+
+    let tl3 = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.home',
+            start: "0%",
+            end: "500%",
+            scrub: 1,
+            pin: true,
+            pinSpacing: false,
+        },
+    });
+    
 
     tl.fromTo('.slide', {y:0}, {y:-400});
 
@@ -66,22 +71,19 @@ else{
         {scale:1, top:"0.6rem", left:"5rem", x: '50%', y: '50%'}
         );
 
-        let tl3 = gsap.timeline({
-            scrollTrigger: {
-                trigger: '.home',
-                start: "0%",
-                end: "500%",
-                scrub: 1,
-                pin: true,
-                pinSpacing: false,
-            },
-        });
     
-}
+
 //tlN.fromTo('.nav', {background: "transparent", color: "white"}, {background:"#ffffffea", color: "black"});
 
 
 // nav-mobile
+window.onscroll = function () { 
+    "use strict";
+    if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200 ) {
+        document.querySelector(".slide-m").innerText = "Anirban"
+    } 
+}
+
 var menuBtn = document.getElementById("menu");
 var menuOpen = document.getElementById("menu-open");
 
