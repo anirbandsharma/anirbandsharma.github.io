@@ -43,32 +43,17 @@ let tlPhoto = gsap.timeline({
     },
 });
 
-let tl3 = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.home',
-        start: "0%",
-        end: "500%",
-        scrub: 1,
-        pin: true,
-        pinSpacing: false,
-    },
-});
 
 const mediaQuery = window.matchMedia('(max-width: 600px)')
 // Check if the media query is true
 if (mediaQuery.matches) {
-    tl.fromTo('.slide', {y:0}, {y:-400});
-
-tlText.fromTo('.text', {x:0}, {x:-800});
-tlPhoto.fromTo('.photo', {x:0}, {x:800});
-
-tl2.fromTo(
-    '.logo', 
-    {scale:2},
-    {scale:1, top:"0.6rem", left:"1rem", x: '50%', y: '50%'}
-    );
+    document.getElementById("home").style.display = "none";
+    tl.fromTo('.slide', {innerText:"something"}, {innerText: "Anirban Dev Sharma"});
 }
 else{
+
+    document.getElementById("home-mobile").style.display = "none";
+    document.getElementById("nav-mobile").style.display = "none";
 
     tl.fromTo('.slide', {y:0}, {y:-400});
 
@@ -80,6 +65,17 @@ else{
         {scale:4},
         {scale:1, top:"0.6rem", left:"5rem", x: '50%', y: '50%'}
         );
+
+        let tl3 = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.home',
+                start: "0%",
+                end: "500%",
+                scrub: 1,
+                pin: true,
+                pinSpacing: false,
+            },
+        });
     
 }
 //tlN.fromTo('.nav', {background: "transparent", color: "white"}, {background:"#ffffffea", color: "black"});

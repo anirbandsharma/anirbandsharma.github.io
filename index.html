@@ -32,7 +32,18 @@
     </style> -->
   </head>
   <body>
-    <div class="home">
+    <nav class="nav" id="nav-mobile">
+      <h3 class="slide">something</h3>
+      <ul class="links">
+        <li onclick="window.scrollTo(0, 0);"><h3>Home</h3></li>
+        <li onclick="window.location='#about'"><h3>About</h3></li>
+        <li onclick="window.location='#projects'"><h3>Projects</h3></li>
+        <li onclick="window.location='#contact'"><h3>Contact</h3></li>
+      </ul>
+      <div class="menu" id="menu">|||</div>
+    </nav>
+
+    <div class="home" id="home">
       <nav class="nav" id="nav">
         <h3 class="slide">something</h3>
         <ul class="links">
@@ -66,6 +77,22 @@
         <a href="#projects" id="menu-close2"><h3>Projects</h3></a>
         <a href="#contact" id="menu-close3"><h3>Contact</h3></a>
       </ul>
+    </div>
+
+    <div class="home-mobile">
+      <div class="logo-m">
+        <h3 class="logo-text-m" onclick="window.scrollTo(0, 0);">
+          Anirban Dev Sharma
+        </h3>
+      </div>
+      <div class="text-m">
+        <p>Something about me. Ok thank you.</p>
+        <p>SOME MORE LINES</p>
+        <button class="main-button">Maybe</button>
+      </div>
+      <div class="photo-m">
+        <img src="./images/avatar.png" alt="avatar" />
+      </div>
     </div>
 
     <section class="part1" id="about">
