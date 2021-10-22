@@ -15,28 +15,14 @@
       rel="stylesheet"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
-    <!-- <style>
-      body {
-        background-image: linear-gradient(
-            to top right,
-            rgba(30, 124, 168, 0.24),
-            rgba(206, 138, 37, 0.144)
-          ),
-          url("./images/1.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: 100%;
-      }
-    </style> -->
   </head>
   <body>
+    <!-- mobile nav -->
     <nav class="nav" id="nav-mobile">
-      <h3 class="slide-m">something</h3>
+      <h3 class="head">something</h3>
       <div class="menu-open" id="menu-open">
         <ul>
-          <li onclick="closeN()"><h3>Home</h3></li>
+          <li onclick="closeN(); window.scrollTo(0, 0);"><h3>Home</h3></li>
           <li onclick="closeN(); window.location='#about'"><h3>About</h3></li>
           <li onclick="closeN(); window.location='#projects'">
             <h3>Projects</h3>
@@ -48,32 +34,6 @@
       </div>
       <div class="menu" id="menu">|||</div>
     </nav>
-
-    <div class="home" id="home">
-      <nav class="nav navi" id="nav">
-        <h3 class="slide">something</h3>
-        <ul class="links">
-          <li onclick="window.scrollTo(0, 0);"><h3>Home</h3></li>
-          <li onclick="window.location='#about'"><h3>About</h3></li>
-          <li onclick="window.location='#projects'"><h3>Projects</h3></li>
-          <li onclick="window.location='#contact'"><h3>Contact</h3></li>
-        </ul>
-        <div class="menu" id="menu">|||</div>
-      </nav>
-      <div class="logo">
-        <h3 class="logo-text" onclick="window.scrollTo(0, 0);">
-          Anirban Dev Sharma
-        </h3>
-      </div>
-      <div class="text">
-        <p>Something about me. Ok thank you.</p>
-        <p>SOME MORE LINES</p>
-        <button class="main-button">Maybe</button>
-      </div>
-      <div class="photo">
-        <img src="./images/avatar.png" alt="avatar" />
-      </div>
-    </div>
 
     <div class="home-mobile">
       <div class="logo-m">
@@ -90,12 +50,42 @@
         <img src="./images/avatar.png" alt="avatar" />
       </div>
     </div>
+    <!-- -- -->
+
+    <nav class="nav" id="nav">
+      <h3 class="head">something</h3>
+      <ul class="links" id="links">
+        <li onclick="window.scrollTo(0, 0);"><h3>Home</h3></li>
+        <li onclick="window.location='#about'"><h3>About</h3></li>
+        <li onclick="window.location='#projects'">
+          <h3>Projects</h3>
+        </li>
+        <li onclick="window.location='#contact'">
+          <h3>Contact</h3>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="home">
+      <div class="logo" id="logo">
+        <h1>Anirban Dev Sharma</h1>
+
+        <div class="text">
+          <p>Something about me. Ok thank you.</p>
+          <p>SOME MORE LINES</p>
+          <button class="main-button">Maybe</button>
+        </div>
+      </div>
+      <div class="photo" id="photo">
+        <img src="./images/profile.jpg" alt="avatar" />
+      </div>
+    </div>
 
     <section class="part1" id="about">
-      <h1>About Me</h1>
       <div class="about">
         <img src="./images/profile.jpg" alt="" />
         <div class="about-text">
+          <h1>About Me</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste
             tempore ea ullam obcaecati ipsa, doloribus ducimus. Officia, dolore
@@ -106,6 +96,45 @@
             <span class="material-icons"> file_download </span>
             <span>Download CV</span>
           </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="timeline" id="timeline">
+      <h1>Education</h1>
+      <div class="list">
+        <div class="container left">
+          <div class="content">
+            <h4>2014</h4>
+            <br />
+            <p>Class X - Maharishi Vidya Mandir (CBSE)</p>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="content">
+            <h4>2016</h4>
+            <br />
+            <p>Class XII - Luit Valley Academy (AHSEC)</p>
+          </div>
+        </div>
+        <div class="container left">
+          <div class="content">
+            <h4>2019</h4>
+            <br />
+            <p>
+              Bachelor of Computer Applications (BCA) - Cotton College State
+              University
+            </p>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="content">
+            <h4>2022</h4>
+            <br />
+            <p>
+              Master of Computer Applications (MCA) - Jorhat Engineering College
+            </p>
+          </div>
         </div>
       </div>
     </section>

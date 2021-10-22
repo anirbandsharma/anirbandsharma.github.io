@@ -1,88 +1,35 @@
 
 
-    let tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: '.home',
-            start: "0%",
-            end: "80%",
-            scrub: 1,
-        },
-    });
-    
-    let tl2 = gsap.timeline({
-        scrollTrigger: {
-            trigger: '.home',
-            start: "0%",
-            end: "80%",
-            scrub: 1,
-        },
-    });
-
-
-    
-    let tlN = gsap.timeline({
-        scrollTrigger: {
-            trigger: '.home',
-            start: "0%",
-            end: "80%",
-            scrub: 1,
-        },
-    });
-    
-    let tlText = gsap.timeline({
-        scrollTrigger: {
-            trigger: '.home',
-            start: "0%",
-            end: "80%",
-            scrub: 1,
-        },
-    });
-    
-    let tlPhoto = gsap.timeline({
-        scrollTrigger: {
-            trigger: '.home',
-            start: "0%",
-            end: "80%",
-            scrub: 1,
-        },
-    });
-
-
-    let tl3 = gsap.timeline({
-        scrollTrigger: {
-            trigger: '.home',
-            start: "0%",
-            end: "500%",
-            scrub: 1,
-            pin: true,
-            pinSpacing: false,
-        },
-    });
-    
-
-    tl.fromTo('.slide', {y:0}, {y:-400});
-
-    tlText.fromTo('.text', {x:0}, {x:-800});
-    tlPhoto.fromTo('.photo', {x:0}, {x:800});
-    
-    tl2.fromTo(
-        '.logo', 
-        {scale:4},
-        {scale:1, top:"0.6rem", left:"5rem", x: '50%', y: '50%'}
-        );
-
-    
-
-//tlN.fromTo('.nav', {background: "transparent", color: "white"}, {background:"#ffffffea", color: "black"});
-
-
 // nav-mobile
+var myNav = document.getElementById('nav');
+var photo = document.getElementById('photo');
+var logo = document.getElementById('logo');
+var links = document.getElementById('links');
+
 window.onscroll = function () { 
     "use strict";
-    if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200 ) {
-        document.querySelector(".slide-m").innerText = "Anirban"
+        if (document.body.scrollTop >= 300 || document.documentElement.scrollTop >= 300 ) {
+            myNav.classList.add("nav-colored");
+            myNav.classList.remove("nav-transparent");
+
+            photo.style.right = "-100%";
+            logo.style.left = "-100%";
+
+            links.style.color = "black";
+            links.style.textShadow = "none";
+        } 
+        else {
+            myNav.classList.add("nav-transparent");
+            myNav.classList.remove("nav-colored");
+
+            photo.style.right = "0";
+            logo.style.left = "0";
+
+            links.style.color = "white";
+            links.style.textShadow = "0 0 3px rgb(0, 0, 0)";
+        }
     } 
-}
+
 
 var menuBtn = document.getElementById("menu");
 var menuOpen = document.getElementById("menu-open");
