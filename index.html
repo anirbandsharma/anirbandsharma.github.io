@@ -162,7 +162,7 @@
       <div class="contact">
         <img src="./images/3.jpg" alt="" />
         <div class="login">
-          <form action="sendemail.php" method="POST">
+          <form class="contact1-form" action="" method="POST">
             <input type="text" name="name" placeholder="Name" />
             <input type="email" name="email" placeholder="Email address" />
             <textarea
@@ -200,6 +200,33 @@
         cellAlign: "center",
         contain: true,
         pageDots: true,
+      });
+    </script>
+
+    <script>
+      $(".contact1-form").on("submit", function (e) {
+        //optional validation code here
+
+        e.preventDefault();
+
+        $.ajax({
+          url: "https://script.google.com/macros/s/AKfycbz7p3ZYokah03N9FEWIeNeLLxXCYfyR15xEhf2dLbfvzkgzAjg/exec",
+          method: "POST",
+          dataType: "json",
+          data: $(".contact1-form").serialize(),
+          success: function (response) {
+            if (response.result == "success") {
+              $(".contact1-form")[0].reset();
+              alert("Thank you for contacting us.");
+              return true;
+            } else {
+              alert("Something went wrong. Please try again.");
+            }
+          },
+          error: function () {
+            alert("Something went wrong. Please try again.");
+          },
+        });
       });
     </script>
   </body>
