@@ -49,14 +49,23 @@ span {
 }
 .nav {
   width: 100%;
+  position: fixed;
+  top: 0;
+  padding: 1rem 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  top: 0;
-  padding: 1rem 5rem;
-  color: black;
   z-index: 10;
+}
+ul {
+  display: flex;
+}
+li {
+  margin-left: 20px;
+  list-style: none;
+}
+.menu {
+  display: none;
 }
 .nav-transparent {
   background-color: transparent;
@@ -65,11 +74,6 @@ span {
   background-color: white;
 }
 
-.menu,
-.menu-open,
-.home-mobile {
-  display: none;
-}
 .home {
   height: 100vh;
 }
@@ -99,25 +103,16 @@ span {
   height: 100vh;
 }
 
-.links {
-  display: flex;
-  color: white;
-  text-shadow: 0 0 3px rgb(0, 0, 0);
-}
-.links li {
-  pointer-events: all;
-  list-style: none;
-  margin-left: 3rem;
-  cursor: pointer;
-}
-
 section {
-  height: 100vh;
+  height: 100%;
   padding: 6rem 10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+#projects {
+  height: 100vh;
 }
 
 section h1 {
@@ -334,27 +329,58 @@ textarea {
 
 /* mobile */
 @media (max-width: 600px) {
+  nav {
+    padding: 1rem 1rem;
+  }
+  ul {
+    display: none;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--light_blue);
+    color: black;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-shadow: 0 0 3px rgb(0, 0, 0);
+  }
+  li {
+    margin-top: 20px;
+    list-style: none;
+    cursor: pointer;
+  }
+  .menu {
+    display: block;
+    font-weight: 900;
+    transform: rotate(90deg);
+    cursor: pointer;
+  }
+
   section {
     padding: 6rem 0.3rem;
   }
-  .nav {
-    padding: 0.6rem 1rem;
-    z-index: 100;
-  }
-  .home,
-  .navi {
-    display: none;
-  }
-  .home-mobile {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
 
-    padding: 5rem 1rem;
+  .logo {
+    top: 0;
+    left: 0;
+    height: 50vh;
+    width: 100%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    transition: ease-in-out 0.6s;
   }
+
+  .photo {
+    top: 50%;
+  }
+  .photo img {
+    height: 50vh;
+  }
+
+  .about img {
+    width: 230px;
+  }
+
   .card img {
     width: 200px;
   }
@@ -368,18 +394,6 @@ textarea {
   }
   .photo-m img {
     width: 200px;
-  }
-
-  .links {
-    display: none;
-  }
-  .menu {
-    display: block;
-    font-weight: 900;
-    padding: 0 10px;
-    transform: rotate(90deg);
-    pointer-events: all;
-    cursor: pointer;
   }
   .contact img {
     width: 300px;
