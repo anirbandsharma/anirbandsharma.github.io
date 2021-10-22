@@ -412,3 +412,13 @@ textarea {
   list-style: none;
   cursor: pointer;
 }
+
+footer {
+  width: 100%;
+  height: 15rem;
+  background-color: var(--light_blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
