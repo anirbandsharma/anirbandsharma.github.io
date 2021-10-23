@@ -297,6 +297,24 @@ section h1 {
   box-shadow: 0px 0px 5px 1px rgb(149, 149, 149);
 }
 
+.social {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.soci {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+}
+.soci:hover {
+  color: var(--blue);
+}
+
 .contact {
   width: 100%;
   display: flex;
