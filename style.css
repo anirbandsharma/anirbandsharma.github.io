@@ -61,7 +61,7 @@ ul {
   display: flex;
 }
 li {
-  margin-left: 20px;
+  margin-left: 40px;
   list-style: none;
 }
 .menu {
@@ -329,7 +329,7 @@ textarea {
 
 /* mobile */
 @media (max-width: 600px) {
-  nav {
+  .nav {
     padding: 1rem 1rem;
   }
   ul {
@@ -347,6 +347,7 @@ textarea {
   }
   li {
     margin-top: 20px;
+    margin-left: 0;
     list-style: none;
     cursor: pointer;
   }

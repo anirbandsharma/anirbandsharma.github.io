@@ -37,7 +37,7 @@ window.onscroll = function () {
     if (event.target == menuOpen) {
       menuOpen.style.display = "none";
       document.body.style.overflow = "auto";
-      document.getElementById("nav").style.padding = "1rem 1rem";
+      myNav.style.padding = "1rem 1rem";
     }
   };
 
@@ -46,6 +46,6 @@ window.onscroll = function () {
     if ($(window).width() < 600) {
     menuOpen.style.display = "none";
     document.body.style.overflow = "auto";
-    document.getElementById("nav").style.padding = "1rem 1rem";
+    myNav.style.padding = "1rem 1rem";
     }
   }
