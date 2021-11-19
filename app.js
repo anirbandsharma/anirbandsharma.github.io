@@ -8,6 +8,9 @@ var logo = document.getElementById('logo');
 var menuBtn = document.getElementById("menu");
 var menuOpen = document.getElementById("menu-open");
 
+
+var dark = document.getElementById('dark');
+
 window.onscroll = function () { 
     "use strict";
         if (document.body.scrollTop >= 100 || document.documentElement.scrollTop >= 100 ) {
@@ -28,24 +31,36 @@ window.onscroll = function () {
 
 
   menuBtn.onclick = function () {
+    menuBtn.style.display = "none";
     menuOpen.style.display = "flex";
     document.body.style.overflow = "hidden";
     document.getElementById("nav").style.padding = "0";
   };
 
-  window.onclick = function (event) {
-    if (event.target == menuOpen) {
-      menuOpen.style.display = "none";
-      document.body.style.overflow = "auto";
-      myNav.style.padding = "1rem 1rem";
-    }
-  };
+  // window.onclick = //function (event) {
+  //   if (event.target == menuOpen) {
+  //     menuOpen.style.display = "none";
+  //     document.body.style.overflow = "auto";
+  //     myNav.style.padding = "1rem 1rem";
+  //   }
+  // };
 
   /* Close */
   function closeN() {
     if ($(window).width() < 600) {
+      menuBtn.style.display = "block";
     menuOpen.style.display = "none";
     document.body.style.overflow = "auto";
     myNav.style.padding = "1rem 1rem";
     }
   }
+
+  // dark.onclick = function () {
+  //   logo.style.backgroundColor = "black";
+  //   myNav.style.backgroundColor = "black";
+  //   document.body.style.backgroundColor = "black";
+
+  //   logo.style.color = "white";
+  //   myNav.style.color = "white";
+  //   document.body.style.color = "white";
+  // };
